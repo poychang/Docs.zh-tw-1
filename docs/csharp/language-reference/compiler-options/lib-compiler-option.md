@@ -2,30 +2,32 @@
 title: "-lib (C# 編譯器選項)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: /lib
+f1_keywords:
+- /lib
 helpviewer_keywords:
 - lib compiler option [C#]
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b60c6028d4b3f72acc31fe6028f7f956e1037eb0
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/23/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib (C# 編譯器選項)
-**/lib** 選項會使用 [/reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項，來指定參考的組件位置。  
+# <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
+**-lib** 選項會使用 [-reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項，來指定參考的組件位置。  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -42,15 +44,15 @@ ms.lasthandoff: 11/21/2017
   
 2.  通用語言執行平台系統目錄。  
   
-3.  **/lib** 所指定的目錄。  
+3.  **-lib** 所指定的目錄。  
   
 4.  LIB 環境變數所指定的目錄。  
   
- 使用 **/reference** 來指定組件參考。  
+ 使用 **-reference** 來指定組件參考。  
   
- **/lib** 為加法；指定超過一次時，即會附加到任何先前的值。  
+ **-lib** 為加法；指定超過一次時，即會附加到任何先前的值。  
   
- 若不想使用 **/lib**，替代方法是將任何必要的組件複製到工作目錄中；這樣一來，您就只需傳遞組件名稱給 **/reference**。 接著，您就可以從工作目錄刪除組件。 由於資訊清單中未指定相依組件的路徑，因此應用程式可以在目標電腦上啟動，並在全域組件快取中尋找和使用組件。  
+ 若不想使用 **-lib**，替代方法是將任何必要的組件複製到工作目錄中；這樣一來，您就只需將組件名稱傳遞給 **-reference**。 接著，您就可以從工作目錄刪除組件。 由於資訊清單中未指定相依組件的路徑，因此應用程式可以在目標電腦上啟動，並在全域組件快取中尋找和使用組件。  
   
  即使編譯器可以參考組件，也不表示通用語言執行平台都能夠在執行階段尋找和載入組件。 如需執行階段如何搜尋參考組件的詳細資訊，請參閱[執行階段如何找出組件](../../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
@@ -68,9 +70,9 @@ ms.lasthandoff: 11/21/2017
  編譯 t2.cs 以建立 .exe 檔。 編譯器會在工作目錄和 C 磁碟機的根目錄中尋找組件參考。  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

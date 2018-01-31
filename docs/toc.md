@@ -151,6 +151,9 @@
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
+## [.NET Core 其他工具](core/additional-tools/index.md)
+### [WCF Web Service Reference Provider](core/additional-tools/wcf-web-service-reference-guide.md)
+### [XML 序列化程式產生器](core/additional-tools/xml-serializer-generator.md)
 ## [從 .NET Framework 移植](core/porting/index.md)
 ### [針對 .NET Core 組織專案](core/porting/project-structure.md)
 ### [分析協力廠商相依性](core/porting/third-party-deps.md)
@@ -258,6 +261,8 @@
 ### [加入程式碼註解](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
 ## [操作說明 C# 主題](csharp/how-to/index.md)
+### [如何使用 `String.Split` 來剖析字串](csharp/how-to/parse-strings-using-split.md)
+### [如何串連字串](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET 編譯器平台 SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 程式設計指南](csharp/programming-guide/)
