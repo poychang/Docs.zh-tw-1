@@ -62,7 +62,7 @@ ms.locfileid: "73737762"
 
 在上圖中，ClientService （由控制器或用戶端程式代碼使用）會使用已註冊 `IHttpClientFactory`所建立的 `HttpClient`。 此處理站會從所管理的集區中指派 `HttpMessageHandler` 的 `HttpClient`。 在使用擴充方法 `AddHttpClient`的 DI 容器中註冊 `IHttpClientFactory` 時，可以使用 Polly 的原則來設定 `HttpClient`。
 
-若要設定上述結構，請安裝包含 `IServiceCollection``AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在應用程式中新增 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `DefaultHttpClientFactory` 之單一物件的 `IHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+若要設定上述結構，請安裝 `Microsoft.Extensions.Http` NuGet 封裝，並在 `IServiceCollection` 中使用 `AddHttpClient()` 擴充方法以在應用程式中加入 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `DefaultHttpClientFactory` 之單一物件的 `IHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 
