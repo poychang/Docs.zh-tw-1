@@ -20,7 +20,7 @@ ms.locfileid: "75714033"
 
 針對這份文件中處理 .NET Framework 版本的一節，您需要在 Windows 電腦上安裝 [.NET Framework](https://dotnet.microsoft.com)。
 
-此外，如果您想要支援較舊的 .NET Framework 目標，則需要從[.net 下載封存頁面](https://dotnet.microsoft.com/download/archives)安裝目標套件或開發人員套件。 請參閱這張表格︰
+此外，如果您想要支援較舊的 .NET Framework 目標，則需要從 [.NET 下載封存頁面](https://dotnet.microsoft.com/download/archives)安裝目標套件或開發人員套件。 請參閱這張表格︰
 
 | .NET Framework 版本 | 要下載的項目                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -46,7 +46,7 @@ ms.locfileid: "75714033"
 
 根據您的需求，您有三個主要選項會以 .NET Standard 為目標。
 
-1. 您可以使用範本所提供的預設 .NET Standard 版本 `netstandard1.4`，它可讓您存取 .NET Standard 上大部分的 Api，同時仍然與 UWP、.NET Framework 4.6.1 和 .NET Standard 2.0 相容。
+1. 您可以使用範本所提供的預設 .NET Standard 版本 `netstandard1.4`，它可讓您存取 .NET Standard 上大部分的 API，同時仍然與 UWP、.NET Framework 4.6.1 和 .NET Standard 2.0 相容。
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -60,7 +60,7 @@ ms.locfileid: "75714033"
 
     .NET Standard 版本具備回溯相容。 這表示 `netstandard1.0` 程式庫是在 `netstandard1.1` 平台和更高版本上執行。 不過，沒有向前相容性。 較低的 .NET Standard 平臺無法參考更高版本。 這表示 `netstandard1.0` 程式庫無法參考目標設為 `netstandard1.1` 或更高版本的程式庫。 針對您的需求，選取正確混合使用 API 與平台支援的標準版本。 現在建議使用 `netstandard1.4`。
 
-3. 如果您想要將目標設為 .NET Framework 版本4.0 或以下，或您想要使用 .NET Framework 中提供的 API，但不是在 .NET Standard 中（例如 `System.Drawing`），請閱讀下列各節，並瞭解如何使用多目標。
+3. 如果您想要將目標設為 .NET Framework 版本 4.0 或以下，或您想要使用 .NET Framework 中提供的 API，但不是在 .NET Standard 中（例如 `System.Drawing`），請閱讀下列各節，並瞭解如何使用多目標。
 
 ## <a name="how-to-target-net-framework"></a>如何以 .NET Framework 為目標
 
@@ -268,7 +268,7 @@ netstandard1.4/
 
 較大程式庫的常見需求是將功能放在不同的專案中。
 
-假設您想要建立可在慣用C#和F#中使用的程式庫。 這表示您程式庫的取用者會以對C#或F#自然的方式使用它。 例如，在 C# 中，您可能會如下使用程式庫︰
+假設您想要建立可在慣用 C# 和 F# 中使用的程式庫。 這表示您程式庫的取用者會以對C#或F#自然的方式使用它。 例如，在 C# 中，您可能會如下使用程式庫︰
 
 ```csharp
 using AwesomeLibrary.CSharp;
